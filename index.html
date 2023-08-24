@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background-color: lightblue;
+  }
+  
+  #box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: lightpink;
+    transition: all 0.3s ease;
+  }
+</style>
+</head>
+<body>
+  <div id="box">Sample Text</div>
+  
+  <label for="colorSelect">Text Color:</label>
+  <select id="colorSelect">
+    <option value="black">Black</option>
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+  </select>
+  
+  <label for="bgColorSelect">Background Color:</label>
+  <select id="bgColorSelect">
+    <option value="lightpink">Light Pink</option>
+  </select>
+  
+  <label for="paddingSelect">Padding:</label>
+  <select id="paddingSelect">
+    <option value="10px">10px</option>
+    <option value="20px">20px</option>
+    <option value="30px">30px</option>
+    <option value="40px">40px</option>
+  </select>
+  
+  <label for="fontSizeSelect">Font Size:</label>
+  <select id="fontSizeSelect">
+    <option value="12px">12px</option>
+    <option value="16px">16px</option>
+    <option value="20px">20px</option>
+    <option value="24px">24px</option>
+  </select>
+  
+  <label for="fontWeightSelect">Font Weight:</label>
+  <select id="fontWeightSelect">
+    <option value="normal">Normal</option>
+    <option value="bold">Bold</option>
+    <option value="bolder">Bolder</option>
+    <option value="lighter">Lighter</option>
+  </select>
+
+<script>
+  const colorSelect = document.getElementById('colorSelect');
+  const bgColorSelect = document.getElementById('bgColorSelect');
+  const paddingSelect = document.getElementById('paddingSelect');
+  const fontSizeSelect = document.getElementById('fontSizeSelect');
+  const fontWeightSelect = document.getElementById('fontWeightSelect');
+  const box = document.getElementById('box');
+
+  colorSelect.addEventListener('change', () => {
+    box.style.color = colorSelect.value;
+  });
+
+  bgColorSelect.addEventListener('change', () => {
+    box.style.backgroundColor = bgColorSelect.value;
+  });
+
+  paddingSelect.addEventListener('change', () => {
+    box.style.padding = paddingSelect.value;
+  });
+
+  fontSizeSelect.addEventListener('change', () => {
+    box.style.fontSize = fontSizeSelect.value;
+  });
+
+  fontWeightSelect.addEventListener('change', () => {
+    box.style.fontWeight = fontWeightSelect.value;
+  });
+</script>
+</body>
+</html>
